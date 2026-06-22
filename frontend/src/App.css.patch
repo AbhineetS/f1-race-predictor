@@ -1,0 +1,17 @@
+--- /Users/abhineetsingh/Downloads/f1-race-predictor/frontend/src/App.css
++++ /Users/abhineetsingh/Downloads/f1-race-predictor/frontend/src/App.css
+@@ -234,6 +234,9 @@
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-end;
+   margin-bottom: 32px;
+   flex-shrink: 0;
+ }
++
++.header-left {
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++}
+ 
+ .header-left h1 {
