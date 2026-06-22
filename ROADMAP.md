@@ -7,3 +7,5 @@
 - Improve OpenF1 API caching
 
 - Add live timing integration
+
+- Add driver comparison page
