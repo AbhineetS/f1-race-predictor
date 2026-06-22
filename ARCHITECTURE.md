@@ -1,0 +1,2 @@
+# Architecture
+Frontend (React) -> FastAPI Backend -> OpenF1 API
