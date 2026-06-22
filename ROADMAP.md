@@ -5,3 +5,5 @@
 
 ## Next Sprint
 - Improve OpenF1 API caching
+
+- Add live timing integration
