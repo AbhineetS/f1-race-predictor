@@ -89,7 +89,7 @@ export default function LeaderboardTable({ drivers }) {
                     {driver.team_colour && (
                        <div className="team-color-stripe" style={{ backgroundColor: `#${driver.team_colour}` }}></div>
                     )}
-                    <TeamLogo teamName={driver.team} width={32} height={32} />
+                    <TeamLogo teamName={driver.team} height={24} />
                     <span>{driver.team}</span>
                   </div>
                 </td>

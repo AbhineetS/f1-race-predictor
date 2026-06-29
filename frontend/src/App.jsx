@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
+import CircuitOverview from "./components/CircuitOverview";
 import LeaderboardTable from "./components/LeaderboardTable";
 
 export default function App() {
@@ -35,6 +36,7 @@ export default function App() {
   return (
     <div className="app-container">
       <Header sessionInfo={sessionInfo} />
+      <CircuitOverview sessionInfo={sessionInfo} />
       <main className="main-content">
         <LeaderboardTable drivers={drivers} />
       </main>
