@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import CircuitOverview from "./components/CircuitOverview";
 import LeaderboardTable from "./components/LeaderboardTable";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function App() {
   const [drivers, setDrivers] = useState([]);
   const [sessionInfo, setSessionInfo] = useState(null);
@@ -11,14 +13,17 @@ export default function App() {
 
   useEffect(() => {
     let timeoutId;
+
     const fetchData = async () => {
       try {
         const [posRes, sessionRes] = await Promise.all([
-          fetch("http://127.0.0.1:8000/positions"),
-          fetch("http://127.0.0.1:8000/session-info")
+          fetch(`${API_URL}/positions`),
+          fetch(`${API_URL}/session-info`)
         ]);
+
         const posData = await posRes.json();
         const sessionData = await sessionRes.json();
+
         setDrivers(posData);
         setSessionInfo(sessionData);
         setLastUpdated(new Date());
@@ -30,6 +35,7 @@ export default function App() {
     };
 
     fetchData();
+
     return () => clearTimeout(timeoutId);
   }, []);
 
